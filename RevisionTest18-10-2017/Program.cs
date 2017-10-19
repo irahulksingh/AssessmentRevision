@@ -16,7 +16,7 @@ namespace Q1
         static void Main(string[] args)
         {
 
-Maximize();
+            Maximize();
             ConsoleColor1();
             bool Choices = true;
 
@@ -24,7 +24,7 @@ Maximize();
             {
                 Choices = MainMenu();
             }
-            
+
         }
         public static bool MainMenu()
         {
@@ -39,53 +39,53 @@ Maximize();
             //}
             //else
             //{
-                // Giving choice option to User
-                Console.CursorLeft = Console.BufferWidth - 150;
-                Console.WriteLine("Hey" + " " + sName + "  Choose from the following options.what would you like to do today ?\n");
-                Console.CursorLeft = Console.BufferWidth - 150;
-                //Console.Write("[ok]"); !!!!
-                Console.WriteLine("1. Know the price of a Movie Tickets");
-                Console.CursorLeft = Console.BufferWidth - 150;
-                Console.WriteLine("2. Pay for group booking of Movie Tickets");
-                Console.CursorLeft = Console.BufferWidth - 150;
-                Console.WriteLine("3. Play the \"Ten Times\" Game");
-                Console.CursorLeft = Console.BufferWidth - 150;
-                Console.WriteLine("4. Play the \"Third Word\" Game");
-                Console.CursorLeft = Console.BufferWidth - 150;
-                Console.WriteLine("0. Exit\n ");
+            // Giving choice option to User
+            Console.CursorLeft = Console.BufferWidth - 150;
+            Console.WriteLine("Hey" + " " + sName + "  Choose from the following options.what would you like to do today ?\n");
+            Console.CursorLeft = Console.BufferWidth - 150;
+            //Console.Write("[ok]"); !!!!
+            Console.WriteLine("1. Know the price of a Movie Tickets");
+            Console.CursorLeft = Console.BufferWidth - 150;
+            Console.WriteLine("2. Pay for group booking of Movie Tickets");
+            Console.CursorLeft = Console.BufferWidth - 150;
+            Console.WriteLine("3. Play the \"Ten Times\" Game");
+            Console.CursorLeft = Console.BufferWidth - 150;
+            Console.WriteLine("4. Play the \"Third Word\" Game");
+            Console.CursorLeft = Console.BufferWidth - 150;
+            Console.WriteLine("0. Exit\n ");
 
             // Depending on user choice calling the related method 
             Console.CursorLeft = Console.BufferWidth - 150;
             string result = Console.ReadLine();
-                if (result == "1")
+            if (result == "1")
 
-                {
-                    iMovieTickets();
-                    return true;
-                }
-                else if (result == "2")
-                {
-                    sGroupBooking();
-                    return true;
-                }
-                else if (result == "3")
-                {
-                    iTenTimes();
-                    return true;
-                }
-                else if (result == "4")
-                {
-                    iThirdword();
-                    return true;
-                }
-                else if (result == "0")
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
+            {
+                iMovieTickets();
+                return true;
+            }
+            else if (result == "2")
+            {
+                sGroupBooking();
+                return true;
+            }
+            else if (result == "3")
+            {
+                iTenTimes();
+                return true;
+            }
+            else if (result == "4")
+            {
+                iThirdword();
+                return true;
+            }
+            else if (result == "0")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
             //}
         }
 
@@ -159,7 +159,7 @@ Maximize();
             Console.ReadLine();
         }
 
-         private static void iThirdword()
+        private static void iThirdword()
         {
             Console.Clear();
             // Taking user input and saving it to a string.
@@ -169,33 +169,33 @@ Maximize();
             // Checking if user input is more then 3 words or not, if it is smaller then showing an error.
             if (String.IsNullOrWhiteSpace(sSentense) || wordcount < 3)
             {
-             
+
                 Console.WriteLine("Please enter 3 or more words");
                 Console.ReadLine();
-           }
+            }
             //After checking if user input is more then 3 words 
-            else if (wordcount>2)
+            else if (wordcount > 2)
             {
                 // We are replacing the whitespaces in the sentense with a single whitespace.
                 string ssSplit;
                 ssSplit = Regex.Replace(sSentense, @"\s+", " ");
                 string sSplit = ssSplit.Split(' ')[2];
-               
-                if(String.IsNullOrWhiteSpace(sSplit))
+
+                if (String.IsNullOrWhiteSpace(sSplit))
                 {
                     Console.WriteLine("Please enter 3 or more words");
                 }
-                 else
-                { 
-                //Writting the output to thr console.
-                Console.WriteLine("Your Third word is" + "  " + sSplit);
+                else
+                {
+                    //Writting the output to thr console.
+                    Console.WriteLine("Your Third word is" + "  " + sSplit);
                 }
                 Console.ReadLine();
             }
             else
             {
                 Console.WriteLine("Your entry is not valid, Please enter more 3 or more words");
-               Console.ReadLine();
+                Console.ReadLine();
             }
         }
 
@@ -223,7 +223,7 @@ Maximize();
                     //Taking user input for age of people.
                     Console.CursorLeft = Console.BufferWidth - 150;
                     Console.Write("Please input the age of person " + (i + 1).ToString() + ":");
-                    
+
                     sInput = Console.ReadLine();
                     if (!int.TryParse(sInput, out iAge))
                     {
@@ -242,7 +242,7 @@ Maximize();
                 Console.WriteLine("The Total Cost for Tickets in {0:C}", iTotal);
             }
             else
-            Console.WriteLine("Incorrect number of persons");
+                Console.WriteLine("Incorrect number of persons");
             Console.CursorLeft = Console.BufferWidth - 150;
             Console.ReadLine();
 
@@ -286,7 +286,5 @@ Maximize();
         }
 
     }
-    
+
 }
-
-
