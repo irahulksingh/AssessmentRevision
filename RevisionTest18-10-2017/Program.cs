@@ -42,7 +42,7 @@ Maximize();
                 Console.CursorLeft = Console.BufferWidth - 150;
                 Console.WriteLine("Hey" + " " + sName + "  Choose from the following options.what would you like to do today ?\n");
                 Console.CursorLeft = Console.BufferWidth - 150;
-                //Console.Write("[ok]");
+                //Console.Write("[ok]"); !!!!
                 Console.WriteLine("1. Know the price of a Movie Tickets");
                 Console.CursorLeft = Console.BufferWidth - 150;
                 Console.WriteLine("2. Pay for group booking of Movie Tickets");
