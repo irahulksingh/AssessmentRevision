@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace ConsoleApplication3
 {
+    //test
     //class remove_space
     //{
     //    public void replace(string str1)
